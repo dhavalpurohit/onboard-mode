@@ -1,0 +1,8 @@
+.sidebar {
+  display: none;
+}
+
+.header.svelte-ro440k{
+  color: var(--white-color) !important;
+  background:#000 !important;
+}

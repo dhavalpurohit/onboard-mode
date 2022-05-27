@@ -1,0 +1,76 @@
+:root {
+  --an-rainbow: #32c5ff 50%, #b620e0 75%, #ffaa12 100%;
+  --rainbow: #32c5ff 0%, #b620e0 50%, #ffaa12 100%;
+  --blue: #627eea 50%, white 100%;
+}
+
+.grb-b,
+.grb-a {
+  position: relative;
+}
+
+.gr-a,
+.gr-b {
+  position: relative;
+}
+
+.gr-b::before,
+.gr-a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  border-radius: inherit;
+  transition: background-position 0.3s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.grb-b::before,
+.grb-a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  /* padding: var(--padding); make configurable before:p-1 */
+  border-radius: inherit;
+  width: 100%;
+
+  /* background-size: 250% auto; make configurable - bg-w-250% or bg-h-100% or bg-wh-200%-100% */
+
+  /* background-position: -68% 0; make configurable - bg-xy--68%-0 */
+
+  /* opacity: 0.5; make configurable - can be configured by before:opacity-50 */
+
+  transition: background-position 0.3s ease-in-out, opacity 0.2s ease-in-out;
+
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* .grb::before {
+  --deg: 90deg;
+  --border-color: #e2e2e2;
+  background: linear-gradient(
+    var(--deg),
+    var(--border-color) 0%,
+    var(--border-color) 0%,
+    #32c5ff 50%,
+    #b620e0 75%,
+    #ffaa12 100%
+  );
+}
+
+.grb:hover::before {
+  background-position: 0 0;
+  opacity: 1;
+} */
