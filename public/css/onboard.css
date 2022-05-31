@@ -1,8 +1,94 @@
+:host {
+  --onboard-font-family-normal: Inter, sans-serif;
+  --onboard-font-family-semibold: Inter, sans-serif;
+  --onboard-font-family-light: Inter, sans-serif;
+  --rainbow: linear-gradient(
+    225deg,
+    #ad00ff 17%,
+    #ff1183 33.5%,
+    #ffac5f 50%,
+    #00a3ff 66.5%,
+    #648f98 76.81%,
+    #ad00ff 83%
+  );
+  --black: #17181b;
+  --white: #fff;
+  --column: 1;
+
+  --border-gray:#353945;
+}
 .sidebar {
   display: none;
 }
 
+.gr-b::before,
+.gr-a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  border-radius: inherit;
+  transition: background-position 0.3s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.grb-b::before,
+.grb-a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  /* padding: var(--padding); make configurable before:p-1 */
+  border-radius: inherit;
+  width: 100%;
+
+  transition: background-position 0.3s ease-in-out, opacity 0.2s ease-in-out;
+
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.modal.svelte-lryths {
+  background: var(--rainbow) !important;
+  padding: 1px;
+}
+.container.svelte-ro440k {
+  border-radius: 5px;
+}
+
+.modal-styling.svelte-lryths,
+.modal.svelte-lryths {
+  border-radius: 0.375rem !important;
+}
 .header.svelte-ro440k{
-  color: var(--white-color) !important;
-  background:#000 !important;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0 !important;
+  border: none !important;
+  border-bottom: 1px solid var(--border-gray) !important;
+} 
+.container.svelte-ro440k {
+  height: auto !important;
+}
+
+.wallets-container.svelte-11upx36{
+  grid-template-columns:repeat(var(--column)) !important;
+}
+.background-transparent.svelte-1wcty06{
+  border: none !important;
+  padding: 0 !important;
+}
+
+button.svelte-11mmkf{
+  border-width: 2px !important;
 }

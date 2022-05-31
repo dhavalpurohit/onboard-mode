@@ -16,7 +16,7 @@
 
 .gr-b::before,
 .gr-a::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -29,7 +29,7 @@
 
 .grb-b::before,
 .grb-a::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;

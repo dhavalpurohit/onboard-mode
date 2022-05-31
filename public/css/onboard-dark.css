@@ -1,33 +1,14 @@
-/* common css */
-:host {
-  --dark-black:rgba(23,24,27,1);
-  --white:#fff;
-}
-.light {
-  --dark-black:#fff;
-  --white:#000;
-}
-
-.sidebar {
-  display: none;
+/* dark mode css */
+:host{
+  --onboard-wallet-button-border-color:#353945;
 }
 .header.svelte-ro440k,
-.modal-styling.svelte-lryths,
-.modal.svelte-lryths {
-  border-radius: 0.375rem !important;
-}
-.container.svelte-ro440k{
-  height: auto !important;
-  background: var(--dark-black) !important;
-}
-
-
-/* dark mode css */
-.header.svelte-ro440k{
-  background: var(--dark-black) !important;
+.content.svelte-ro440k,
+button.wallet-button-styling.svelte-11mmkf {
+  background: var(--black) !important;
   color: var(--white) !important;
 }
-.close-button.svelte-gtn9pc{
+.close-button.svelte-gtn9pc {
   background: transparent !important;
   color: var(--white) !important;
 }
