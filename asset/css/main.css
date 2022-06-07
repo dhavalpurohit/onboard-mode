@@ -1,4 +1,4 @@
-:root{
+:root {
   --black: #17181b;
 }
 body:not([data-font*="inter"]) {
@@ -37,4 +37,41 @@ body {
 .header.svelte-ro440k,
 .modal-styling.svelte-lryths {
   border-radius: none !important;
+}
+
+.gr-b::before,
+.gr-a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  border-radius: inherit;
+  transition: background-position 0.3s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.grb-b::before,
+.grb-a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  /* padding: var(--padding); make configurable before:p-1 */
+  border-radius: inherit;
+  width: 100%;
+
+  transition: background-position 0.3s ease-in-out, opacity 0.2s ease-in-out;
+
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }

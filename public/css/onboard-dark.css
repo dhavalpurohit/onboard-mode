@@ -1,6 +1,6 @@
 /* dark mode css */
-:host{
-  --onboard-wallet-button-border-color:#353945;
+:host {
+  --onboard-wallet-button-border-color: #353945;
 }
 .header.svelte-ro440k,
 .content.svelte-ro440k,
@@ -10,5 +10,14 @@ button.wallet-button-styling.svelte-11mmkf {
 }
 .close-button.svelte-gtn9pc {
   background: transparent !important;
+  color: var(--gray) !important;
+}
+.close-button.svelte-gtn9pc:hover {
+  color: var(--white) !important;
+}
+
+.connecting-container.svelte-ag34wy,
+.onboard-button-primary {
+  background-color: var(--black) !important;
   color: var(--white) !important;
 }

@@ -1,7 +1,7 @@
 :root {
-  --an-rainbow: #32c5ff 50%, #b620e0 75%, #ffaa12 100%;
-  --rainbow: #32c5ff 0%, #b620e0 50%, #ffaa12 100%;
-  --blue: #627eea 50%, white 100%;
+  --an-cpy: #32c5ff 50%, #b620e0 75%, #ffaa12 86%; /* cyan pink yellow */
+  --rainbow: #ad00ff 17%, #ff1183 33.5%, #ffac5f 50%, #00a3ff 66.5%,
+    #648f98 76.81%, #ad00ff 83%;
 }
 
 .grb-b,

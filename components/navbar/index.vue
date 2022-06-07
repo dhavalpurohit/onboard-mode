@@ -2,6 +2,7 @@
 import { useColorMode, useCycleList } from "@vueuse/core";
 import Onboard from "@web3-onboard/core";
 import injectedModule from "@web3-onboard/injected-wallets";
+import { en } from "../i18n"
 
 const mode = useColorMode();
 const modes = ["dark", "light"];
@@ -75,29 +76,7 @@ const onboard = Onboard({
       { name: "MetaMask", url: "https://metamask.io" },
     ],
   },
-  i18n: {
-    en: {
-      connect: {
-        selectingWallet: {
-          header: "Connect your wallet",
-          sidebar: {
-            heading: "",
-            subheading: "",
-            paragraph: "",
-          },
-          recommendedWalletsPart1: "",
-          recommendedWalletsPart2: "",
-          installWallet: "",
-          agreement: {
-            agree: "",
-            terms: "",
-            and: "",
-            privacy: "",
-          },
-        },
-      },
-    },
-  },
+  i18n: en
 });
 
 function connectWallet() {
@@ -121,13 +100,13 @@ if (typeof window !== "undefined") {
     </div>
     <div class="walletbutton ml-auto flex">
       <button
-        class="enableEthereumButton color-black b-none p-2 rd bg-blue"
+        class="enableEthereumButton btn"
         id="connetctwallet"
       >
         Connect
       </button>
       <button
-        class="flex items-center px-3 pt-1 pb-1.5 rounded-full"
+        class="mode-btn  grb-b before:(bg-gray p-[1px]) hover:(before:(bg-gr-rainbow) text-white)"
         @click="next()"
       >
         <div v-if="mode === 'dark'" class="i-carbon-moon"></div>
